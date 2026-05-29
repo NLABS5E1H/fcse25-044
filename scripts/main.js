@@ -78,7 +78,7 @@ const slideshowArr = [
 ];
 
 const slideshowContent =
-    document.getElementById("_content-img");
+    document.getElementById("content-img");
 const slideshowLink =
     document.getElementById("slide-link");
 let currentSlideIndex = 0;
