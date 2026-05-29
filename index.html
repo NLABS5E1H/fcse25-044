@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+ 
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--add this to all other slides-->
+ <link rel="stylesheet" href="style.css">
+
+ <title>Hexage</title>
+
+</head>
+
+<body>
+ <header>
+   <div class ="flex-menu"><a href="index.html">hexage</a></div>
+
+   <div class = "hamburger">
+     <div class = "bar"></div>
+     <div class = "bar"></div>
+     <div class = "bar"></div>
+   </div>
+
+ </header>
+
+ <nav> <!--should become a burger menu when on mobile-->
+   <ul class ="nav-list">
+    <li class = "nav-item"><a href="index.html">Home</a></li>
+    <li class="nav-item dropdown">
+         <a href="#">Games</a>
+         <ul class="dropdown-menu">
+            <li><a href="flyingtank.html"></a>Flying Tank</li>
+            <li><a href="reaper.html"></a>Reaper</li>
+            <li><a href="redcon.html"></a>REDCON</li>
+            <li><a href="ritual.html"></a>Ritual</li>            
+         </ul>
+      </li>
+    <li class = "nav-item"><a href="about.html">About</a></li>
+    <li class = "nav-item"><a href="news.html">Announcments</a></li>
+    <li class = "nav-item"><a href="contact.html">Contact</a></li>
+   </ul>
+ </nav>
+
+ 
+
+ <main>
+   <div class="content">
+    <a id="slide-link" href="#">
+     <img src="#" id="_content-img" alt="Thumbnail1" class="content-img" width="650">
+    </a>
+   </div>
+   
+   <div class="barrier"></div>
+   
+   <a href="news.html" class="news-link"></a>
+
+     <article class="news-box" id="article1">
+      <h1>ANNOUNCMENTS</h1><br>
+      <P>Flying tank has gone into full release! Redcon will also be receiving an update soon...ThIs just in!!!! Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</P>
+     </article>
+
+   
+
+   <div class="barrier2"></div>
+ </main>
+
+<footer>
+ <p>Copyright © 2015 Hexage s.r.o.</p>
+</footer>
+<!--link javascript with the <script> tag, make sure to link at the bottom of the page within the body
+    to make sure it is executed after the page loads. You could also use the "defer" attribute to do the same thing-->
+<script src="scripts/main.js"></script>
+
+</body>
+
+</html>

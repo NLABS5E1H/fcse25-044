@@ -1,0 +1,572 @@
+/*  universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    /* THE 2 below this fixed footer floating in the middle of the page*/
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #CAD0FF, #E3E3E3);
+    transition: background-color 0.6s ease;
+    /* background color testing */
+    /*background: linear-gradient(90deg, #3F3F42, #5D5D3C);*/
+    /*background: linear-gradient(90deg, #B8E9D4, #F4985A, #12243F);*/
+     /*background: linear-gradient(90deg, hsla(192, 20%, 49%, 1) 0%, hsla(23, 91%, 54%, 1) 100%); 
+   redcon?*/
+    /* background: linear-gradient(90deg, #FF1B6B, #45CAFF); flying tank*/
+    /*background: linear-gradient(90deg, #EBF4F5, #B5C6E0); reaper*/
+    /*background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+     good with ritual */
+}
+
+.about-body {
+    background-color: linear-gradient(90deg, #3F3F42, #5D5D3C);
+}
+footer {
+    background-color: black;
+    color: white;
+    height: 50px;
+    position: relative;
+    
+}
+ 
+
+footer p {
+   justify-self: center;
+   margin-bottom: 0;
+   margin-top: 1%;
+}
+
+/* vvv header styles vvv */
+.flex-menu {
+    display: none;
+}
+
+.flex-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.key-art-splash {
+   display: flex;
+   justify-content: center;
+}
+
+.key-art-splash-left {
+    display: flex;
+    justify-content: left;
+}
+
+.key-art-splash-right {
+    display: flex;
+    justify-content: right;
+}
+/* ^^^ header styles ^^^ */
+
+/* vvv navigation bar styles vvv */
+nav {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 15px 20px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.nav--open {
+    transform: translate(0) !important;
+}
+
+.hamburger--open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+.nav-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: auto;
+}
+
+.nav-item {
+    min-height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    transition: all 0.4s;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    height: 3px;
+    width: 27px;
+    background: orange;
+    margin: 5px 0;
+    transition: all 0.4s ease-in-out;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    background-color: black;
+    list-style: none;
+    min-width: 220px;
+    display: none;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    color: white;
+    
+}
+
+.dropdown-menu a {
+    padding: 15px 20px;
+    display: flex;
+    position: inherit;
+    column-gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+   
+  
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    main {
+        position: relative;
+
+    }
+
+    header {
+        display: flex;
+        background-color: black;
+        padding: 30px 20px;
+        min-width: 100vw;
+        justify-content: space-between;  
+        position:fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999; /* this fixed issues with content appearing infront of the header when scrolling on mobile*/
+    }
+
+    nav {
+        position: fixed;
+        background-color: black;
+        width: 100%;
+        display: flex;
+        right: 0;
+        top: 70px;
+        transform: translateX(100%);
+        z-index: 9998;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 15px 20px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+   
+    .nav-list {
+        margin-right: 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0 10px;
+    }
+
+    nav li {
+        justify-content: center;
+    }
+
+    nav li:first-child {
+        display: none;
+        
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .key-art-splash {
+        display: none;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+
+   
+
+    .flex-menu {
+        display: flex;
+        
+        
+    }
+
+    .flex-menu a {
+        font-size: large;
+        position: absolute;
+        top: 20px;
+        left: 60px;
+    }
+
+    
+
+    article {
+        top: 100%;
+        left: 0;
+    }
+
+    footer p {
+        margin-top: 2%;
+    }
+
+    .about-logo  {
+        
+        height: auto;
+        display: block;
+
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+ .gallery .gallery-reap {
+    grid-template-columns:repeat(1, 1fr);
+ }
+}
+/* ^^^ navigation bar styles ^^^ */
+
+/* vvv slideshow styles vvv */
+
+
+.content {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.content-img {
+    object-fit:contain;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-img:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 20px;
+}
+/* ^^^ slideshow styles ^^^ */
+
+/* vvv news article styles vvv */
+article {
+    position: relative;
+    margin-top: 30px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.news-page {
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.news-box {
+    background-color: rgb(152, 169, 169);
+    color:black;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: /*t*/80px /*l*/15% /*b*/30px /*r*/15%;
+    transition: 0.4s;
+    max-height: 150px;
+    max-width: 70%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 15px 20px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/*.news-link { did not work, used js instead
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}*/
+
+.news-box:hover {
+    transform: scale(1.01);
+    background-color:lightslategrey ;
+}
+
+.news-preview {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.news-preview:hover {
+    transform: scale(1.01);
+    background-color: #222;
+}
+
+.preview-text {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.barrier {
+    display:flex;
+    height: 10px;
+    width: 80%;
+    background: black;
+    top: 50px;
+    bottom: 5px;
+    right: 10%;
+    left: 10%;
+    position: relative;
+}
+
+.barrier2 {
+    display:flex;
+    height: 10px;
+    width: 80%;
+    background: rgb(0, 0, 0);
+    top: 1px;
+    bottom: 50px;
+    right: 10%;
+    left: 10%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* ^^^ news article styles ^^^ */
+
+/*vvv about vvv*/
+.about-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 40px;
+}
+
+.about-page p {
+    max-width: 700px;
+    line-height: 1.7;
+    font-size: 20pt;
+}
+.about-logo {
+ margin-bottom: 30px;
+}
+
+.al-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.al-list a {
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+}
+
+.al-list img {
+    width: 50px;
+    
+}
+
+.link-box {
+    background-color: rgb(155, 174, 167);
+    border: orange;
+    border-width: 5px;
+    border-radius: 10px;
+    height:80px;
+}
+/*^^^ about ^^^*/
+
+/*vvv contact vvv*/
+.form-left {
+    background-color: aquamarine;
+}
+
+.form-right {
+    background-color: #a9b2b3;
+}
+
+.icon {
+    padding: 25px;
+    margin-right: 10px;
+    margin-top: -11px;
+}
+
+.button {
+    background-color: aquamarine;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+/*^^^ contact ^^^*/
+
+/* vvv game page vvv */
+
+.game-body-flt {
+    background: linear-gradient(90deg, #FF1B6B, #45CAFF);
+    color: white;
+}
+
+.game-body-reap {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+}
+
+.game-body-red {
+    background: linear-gradient(90deg, hsla(192, 20%, 49%, 1) 0%, hsla(23, 91%, 54%, 1) 100%);
+    
+}
+
+.game-body-rit {
+    background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+}
+.game-content {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 60px;
+    box-sizing: border-box;
+    
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.video iframe {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border-radius: 10px;
+}*/
+
+.game-content h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.game-content p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.game-content ul {
+    margin: 30px 0;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.gallery-reap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+.gallery-reap img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-reap img:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+}
+
+.game-content h1 {
+    font-size: 50pt;
+}
+
+.game-content p {
+    font-size: 18pt;
+}
+
+.game-content ul {
+    font-size: 18pt;
+}
+/* ^^^ games styles ^^^ */
+
