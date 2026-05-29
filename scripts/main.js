@@ -53,25 +53,25 @@ function createSlideshow() {
 
 const slideshowArr = [
     {
-        image: "key_art/banner_flt.png",
+        image: "Key_art/banner_flt.png",
         link: "flyingtank.html",
         color: "linear-gradient(90deg, #FF1B6B, #45CAFF)"
     },
 
     {
-        image: "key_art/reaper.png",
+        image: "Key_art/reaper.png",
         link: "reaper.html",
         color: "linear-gradient(to right, #141e30, #243b55)"
     },
 
     {
-        image: "key_art/redcon.png",
+        image: "Key_art/redcon.png",
         link: "redcon.html",
         color: "linear-gradient(90deg, hsla(192, 20%, 49%, 1) 0%, hsla(23, 91%, 54%, 1) 100%)"
     },
 
     {
-        image: "key_art/ritual.png",
+        image: "Key_art/ritual.png",
         link: "ritual.html",
         color: "linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%)"
     }
